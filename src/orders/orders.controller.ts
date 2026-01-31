@@ -49,8 +49,6 @@ export class OrdersController {
     @Body() statusDto: StatusDto,
   ) {
     try {
-      console.log({ statusDto });
-      console.log({ id });
       return this.ordersService.send('changeOrderStatus', {
         id,
         status: statusDto.status,
